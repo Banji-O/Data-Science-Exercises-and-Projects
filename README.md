@@ -26,11 +26,6 @@ The repository is organized into the following sections:
    - Unsupervised learning (clustering and dimensionality reduction)
    - Model evaluation and selection
 
-5. **Advanced Topics:**
-   - Natural Language Processing (NLP)
-   - Time series analysis
-   - Deep learning with TensorFlow and Keras
-
 ## Getting Started
 
 To get started with these exercises and projects, follow these steps:
