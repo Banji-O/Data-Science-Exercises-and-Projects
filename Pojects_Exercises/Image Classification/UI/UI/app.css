@@ -1,0 +1,154 @@
+/* General Card Styling */
+.card-wrapper {
+  margin: 5% 0;
+  display: flex;
+  justify-content: center; /* Center the cards horizontally */
+}
+
+/* Align card height */
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Ensures name is at the bottom */
+  align-items: center;
+  height: 100%; /* Make all cards the same height */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Uniform shadow for all cards */
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.08); /* Slight zoom on hover */
+}
+
+/* Circular Image Styling */
+.custom-circle-image {
+  width: 10vw; /* Responsive width */
+  height: 10vw;
+  border-radius: 50%; /* Circular image */
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Soft shadow for professional look */
+}
+
+.custom-circle-image img {
+  object-fit: cover; /* Ensure image fits within circle */
+  width: 100%;
+  height: 100%;
+}
+
+/* Card Title Styling */
+.card-title {
+  font-family: 'Montserrat', sans-serif; /* Modern professional font */
+  letter-spacing: 1.2px;
+  font-size: 1.5rem;
+  color: #333; /* Darker color for title */
+  margin-bottom: 10px;
+  margin-top: auto; /* Align name at the bottom */
+  text-align: center; /* Center text */
+}
+
+/* Card Text Styling */
+.card-text {
+  font-family: 'Lora', serif; /* Elegant serif font for body text */
+  font-size: 18px;
+  line-height: 1.6;
+  color: #555; /* Softer dark color for text readability */
+}
+
+/* Dropzone Styling */
+.dropzone {
+  border-style: dashed;
+  border-color: #5B84B1FF; /* Muted blue for the border */
+  border-width: 2px;
+  background-color: #F2F4F8; /* Light background color */
+  padding: 20px;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif; /* Match the professional theme */
+  font-size: 18px;
+  color: #5B84B1FF; /* Match border color */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.dropzone:hover {
+  background-color: #E1E8F0; /* Slightly darker on hover */
+}
+
+/* Error Message Styling */
+.error {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 28px;
+  line-height: 1.4;
+  color: #D9534F; /* Red for error messages */
+  text-align: center;
+  margin: 20px 0;
+}
+
+/* Table Styling */
+#classTable {
+  font-family: 'Montserrat', sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow for professional look */
+}
+
+#classTable td, #classTable th {
+  border: 1px solid #ddd;
+  padding: 12px;
+  font-size: 16px;
+  color: #333;
+}
+
+#classTable th {
+  background-color: #3A506B; /* Deep blue for header background */
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+#classTable tr:nth-child(even) {
+  background-color: #F9F9F9; /* Light gray for alternate rows */
+}
+
+#classTable tr:hover {
+  background-color: #F1F1F1; /* Hover effect for table rows */
+}
+
+/* Button Styling */
+#submitBtn {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+  background-color: #5B84B1FF; /* Primary blue */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border-radius: 5px; /* Rounded corners for button */
+}
+
+#submitBtn:hover {
+  background-color: #486A94; /* Darker blue on hover */
+}
+
+
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+  .custom-circle-image {
+    width: 20vw;
+    height: 20vw;
+  }
+
+  .card-title {
+    font-size: 1.3rem;
+  }
+
+  .card-text {
+    font-size: 16px;
+  }
+
+  #submitBtn {
+    font-size: 16px;
+    padding: 8px 16px;
+  }
+}

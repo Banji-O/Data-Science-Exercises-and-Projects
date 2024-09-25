@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Famous Personality Classifier</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Merriweather:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./dropzone.min.css">
+    <link rel="stylesheet" href="./app.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-light bg-dark justify-content-center">
+        <a class="navbar-brand text-white" href="#">Famous Personality Classifier</a>
+    </nav>
+    
+    <div class="container">
+        <div class="row">
+            <!-- Beyonce Card -->
+            <div class="col card-wrapper" data-player="beyonce">
+                <div class="card border-0 shadow-sm">
+                    <div class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image">
+                        <img class="w-100 h-100" src="./images/beyonce.jpg" alt="Card image cap">
+                    </div>
+                    <div class="card-body text-center mt-4">
+                        <h4 class="text-titlecase card-title">Beyonce</h4>
+                    </div>
+                </div>
+            </div>            
+            <!-- Kamala Harris Card -->
+            <div class="col card-wrapper" data-player="kamala">
+                <div class="card border-0 shadow-sm">
+                    <div class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image">
+                        <img class="w-100 h-100" src="./images/kamala.jpg" alt="Card image cap">
+                    </div>
+                    <div class="card-body text-center mt-4">
+                        <h4 class="text-titlecase card-title">Kamala Harris</h4>
+                    </div>
+                </div>
+            </div>              
+            <!-- Maria Sharapova Card -->
+            <div class="col card-wrapper" data-player="maria">
+                <div class="card border-0 shadow-sm">
+                    <div class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image">
+                        <img class="w-100 h-100" src="./images/maria.jpg" alt="Card image cap">
+                    </div>
+                    <div class="card-body text-center mt-4">
+                        <h4 class="text-titlecase card-title">Maria Sharapova</h4>
+                    </div>
+                </div>
+            </div>          
+
+            <!-- Lionel Messi Card -->
+            <div class="col card-wrapper" data-player="messi">
+                <div class="card border-0 shadow-sm">
+                    <div class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image">
+                        <img class="w-100 h-100" src="./images/messi.jpg" alt="Card image cap">
+                    </div>
+                    <div class="card-body text-center mt-4">
+                        <h4 class="text-titlecase card-title">Lionel Messi</h4>
+                    </div>
+                </div>
+            </div>      
+
+            <!-- Vladimir Putin Card -->
+            <div class="col card-wrapper" data-player="putin">
+                <div class="card border-0 shadow-sm">
+                    <div class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image">
+                        <img class="w-100 h-100" src="./images/putin.jpg" alt="Card image cap">
+                    </div>
+                    <div class="card-body text-center mt-4">
+                        <h4 class="text-titlecase card-title">Vladimir Putin</h4>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row">
+            <!-- File Upload Dropzone -->
+            <div class="col-sm-4">
+                <div class="row">
+                    <div class="col-12 mx-auto">
+                        <form action="/file-upload" class="dropzone" id="dropzone">
+                            <div class="dz-message needsclick">
+                                <img src="./images/upload.png" width="50vw" height="50vw"><br>
+                                <span class="note needsclick">Drop files here or click to upload</span>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-12 text-center">
+                        <button id="submitBtn" type="button" class="btn btn-success">Classify</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Error Message -->
+            <div class="col-sm-8 error text-danger" id="error">
+                <p>Oops... unable to detect face and eyes. Image classification failed</p>    
+            </div>
+
+            <div class="col-sm-4" id="resultHolder"></div>
+
+            <!-- Results Table -->
+            <div class="col-sm-4" id="divClassTable">
+                <table id="classTable">
+                    <thead>
+                        <tr>
+                            <th>Personality</th>
+                            <th>Probability Score</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Beyonce</td>
+                            <td id="score_beyonce"></td>
+                        </tr>
+                        <tr>
+                            <td>Kamala Harris</td>
+                            <td id="score_kamala"></td>
+                        </tr>
+                        <tr>
+                            <td>Maria Sharapova</td>
+                            <td id="score_maria"></td>
+                        </tr>
+                        <tr>
+                            <td>Lionel Messi</td>
+                            <td id="score_messi"></td>
+                        </tr>
+                        <tr>
+                            <td>Vladimir Putin</td>
+                            <td id="score_putin"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<script src="./dropzone.min.js"></script>
+<script src="./app.js"></script>
+</html>
