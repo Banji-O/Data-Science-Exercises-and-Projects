@@ -1,0 +1,30 @@
+USING VISUAL STUDIO CODE
+
+Ctrl + `` (backsstick) - This will open the integrated terminal
+
+python -m venv myvenv - This will create a virtual environment named myvenv
+
+python -m venv myvenv python=3.8 - This will create a virtual environment named myvenv and install python3.8
+conda create -n tensorflow_env python=3.9 - Git Bash
+
+myvenv\Scripts\activate  - This will activate the environment
+
+source myvenv/Scripts/activate - When using Git Bash
+
+python -m pip install --upgrade pip  - This will upgrade pip
+
+pip install -r requirements.txt  - This will install libraries listed in the requirements.txt file
+
+Ctrl + Shift + P  - To select the correct python interpreter
+
+
+SOLUTION TO TENSORFLOW INSTALLATION ERROR
+https://pypi.python.org/pypi/setuptools/0.6c11
+
+or
+pro_env C:\Users\...>conda install -c tensorflow tensorflow
+
+Download and install Microsoft visual C++ 2015 Redistributable Update 3
+----------------------------------------------------------------
+
+What do you call an alligator that wears a vest ---> INVESTIGATOR
